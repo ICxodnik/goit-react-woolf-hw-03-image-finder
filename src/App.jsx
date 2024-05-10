@@ -74,24 +74,6 @@ export class App extends Component {
     }
   };
 
-  updateImages(result, hasNextPage) {
-    this.setState({
-      images: result,
-      hasNextPage: hasNextPage,
-      isLoading: false,
-    });
-  }
-
-  addImages(result, hasNextPage) {
-    this.setState(prevState => {
-      return {
-        images: prevState.images.concat(result),
-        hasNextPage: hasNextPage,
-        isLoading: false,
-      };
-    });
-  }
-
   handleOpenModal = id => {
     const image = this.state.images.find(i => i.id === id);
     this.setState({
