@@ -16,9 +16,6 @@ export default class Error extends Component {
     document.removeEventListener('keydown', this.handleEscButton);
   }
   render() {
-    if (!this.props.appError.length) {
-      return;
-    }
     return (
       <>
         <div className="overlay" onClick={this.props.onOverlayClick}></div>
